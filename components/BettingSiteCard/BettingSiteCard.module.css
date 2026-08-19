@@ -1,0 +1,270 @@
+.card {
+  background-color: #000000;
+  border: 1.5px solid var(--theme-card-border, #d946ef);
+  border-radius: 16px;
+  padding: 18px 24px 14px;
+  margin-bottom: 18px;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover {
+  border-color: var(--theme-card-border-hover, #e879f9);
+  box-shadow: var(--theme-card-glow, 0 0 20px rgba(217, 70, 239, 0.3));
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Left Logo Box Container */
+.logoBox {
+  flex-shrink: 0;
+  width: 220px;
+  height: 80px;
+  background-color: #000000;
+  border: 1.5px solid #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.logoBox:hover {
+  border-color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Center Bonus Information */
+.bonusWrapper {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.bonusLabel {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.bonusTitle {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+/* Right Action Buttons */
+.actionsWrapper {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.btnClaim {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 40px;
+  background: var(--theme-btn-claim-bg, #cf89ff);
+  border: 1.5px solid var(--theme-btn-claim-bg, #cf89ff);
+  color: var(--theme-btn-claim-text, #000000);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--primary-glow, rgba(207, 137, 255, 0.35));
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.btnClaim:hover {
+  background: var(--theme-btn-claim-hover, #dfaeff);
+  border-color: var(--theme-btn-claim-hover, #dfaeff);
+  box-shadow: 0 0 16px var(--primary-glow, rgba(207, 137, 255, 0.5));
+  transform: translateY(-1px);
+}
+
+.btnReview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 40px;
+  background: var(--theme-btn-review-bg, #000000);
+  border: 1.5px solid var(--theme-btn-review-border, #cf89ff);
+  color: var(--theme-btn-review-text, #ffffff);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.btnReview:hover {
+  background: #111111;
+  border-color: var(--theme-btn-review-hover, #dfaeff);
+  box-shadow: 0 0 14px var(--primary-glow, rgba(207, 137, 255, 0.35));
+  transform: translateY(-1px);
+}
+
+/* Bottom Disclaimer */
+.disclaimerWrapper {
+  margin-top: 14px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.disclaimerText {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Mobile View - Matching Uploaded Reference Design */
+@media (max-width: 820px) {
+  .card {
+    padding: 16px 16px 14px;
+    border-radius: 16px;
+    border: 1.5px solid var(--theme-card-border, #d946ef);
+    background-color: #000000;
+    margin-bottom: 20px;
+    box-shadow: var(--theme-card-glow, 0 0 15px rgba(217, 70, 239, 0.15));
+  }
+
+  .mainContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .logoBox {
+    width: 100%;
+    max-width: 100%;
+    height: 110px;
+    background-color: #000000;
+    border: 1.5px solid #ffffff;
+    border-radius: 14px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logoLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logoImg {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .bonusWrapper {
+    gap: 6px;
+    padding: 0;
+  }
+
+  .bonusLabel {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    font-weight: 500;
+  }
+
+  .bonusTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #ffffff;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .actionsWrapper {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 2px;
+  }
+
+  .btnClaim {
+    flex: 1;
+    max-width: 160px;
+    height: 42px;
+    font-size: 0.92rem;
+    background: var(--theme-btn-claim-bg, #cf89ff);
+    border: 1.5px solid var(--theme-btn-claim-bg, #cf89ff);
+    color: var(--theme-btn-claim-text, #000000);
+    border-radius: 9999px;
+  }
+
+  .btnReview {
+    flex: 1;
+    max-width: 160px;
+    height: 42px;
+    font-size: 0.92rem;
+    background: var(--theme-btn-review-bg, #000000);
+    border: 1.5px solid var(--theme-btn-review-border, #cf89ff);
+    color: var(--theme-btn-review-text, #ffffff);
+    border-radius: 9999px;
+  }
+
+  .disclaimerWrapper {
+    margin-top: 12px;
+    padding-top: 2px;
+  }
+
+  .disclaimerText {
+    font-size: 0.74rem;
+    color: #94a3b8;
+    line-height: 1.45;
+    padding: 0 4px;
+  }
+}

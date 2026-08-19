@@ -1,0 +1,365 @@
+/* Design System Tokens for Pookie Play */
+:root {
+  --bg-main: #000000;
+  --bg-card: #07070a;
+  --bg-card-hover: #0e0e14;
+  --bg-surface: #101016;
+  --bg-score-container: #ffffff;
+  
+  --primary-accent: #c026d3;
+  --primary-glow: rgba(192, 38, 211, 0.35);
+  --primary-light: #e879f9;
+  --primary-dark: #a21caf;
+  --primary-gradient: linear-gradient(135deg, #c026d3 0%, #ec4899 100%);
+  --headline-gradient: linear-gradient(90deg, #d946ef 0%, #ec4899 100%);
+
+  --border-card: 1px solid rgba(192, 38, 211, 0.4);
+  --border-card-hover: 1px solid rgba(232, 121, 249, 0.7);
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.1);
+  --border-dark-purple: 1px solid #2a1533;
+
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-dark: #111827;
+  --text-dark-muted: #4b5563;
+
+  --color-green: #22c55e;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  --container-max: 1247px;
+  --container-padding: 20px;
+  
+  --font-sans: var(--font-poppins), 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --theme-card-border: #d946ef;
+  --theme-card-border-hover: #e879f9;
+  --theme-card-glow: 0 0 20px rgba(217, 70, 239, 0.3);
+  --theme-btn-border: #cf89ff;
+  --theme-btn-glow: rgba(207, 137, 255, 0.45);
+  --primary-btn-text: #ffffff;
+
+  /* Card Action Buttons: India / Default (Purple Pill Filled + Outlined) */
+  --theme-btn-claim-bg: #cf89ff;
+  --theme-btn-claim-hover: #dfaeff;
+  --theme-btn-claim-text: #000000;
+  --theme-btn-review-bg: #000000;
+  --theme-btn-review-border: #cf89ff;
+  --theme-btn-review-text: #ffffff;
+  --theme-btn-review-hover: #dfaeff;
+  --theme-score-card-border: rgba(207, 137, 255, 0.35);
+  --theme-score-card-border-hover: #dfaeff;
+}
+
+/* Country Theme: Canada (Vibrant Orange) */
+[data-theme="canada"],
+[data-theme="CA"],
+html[data-theme="canada"],
+body[data-theme="canada"] {
+  --primary-accent: #fb8d00;
+  --primary-glow: rgba(251, 141, 0, 0.4);
+  --primary-light: #fdba74;
+  --primary-dark: #ea580c;
+  --primary-gradient: linear-gradient(135deg, #fb8d00 0%, #ea580c 100%);
+  --headline-gradient: linear-gradient(90deg, #fb8d00 0%, #f97316 100%);
+
+  --border-card: 1.5px solid #fb8d00;
+  --border-card-hover: 1.5px solid #fdba74;
+  --border-subtle: 1px solid rgba(251, 141, 0, 0.2);
+  --border-dark-purple: 1px solid #3d2005;
+
+  --theme-card-border: #fb8d00;
+  --theme-card-border-hover: #fdba74;
+  --theme-card-glow: 0 0 20px rgba(251, 141, 0, 0.35);
+  --theme-btn-border: #fb8d00;
+  --theme-btn-glow: rgba(251, 141, 0, 0.45);
+
+  --theme-btn-claim-bg: #fb8d00;
+  --theme-btn-claim-hover: #fdba74;
+  --theme-btn-claim-text: #000000;
+  --theme-btn-review-bg: #000000;
+  --theme-btn-review-border: #fb8d00;
+  --theme-btn-review-text: #ffffff;
+  --theme-btn-review-hover: #fdba74;
+  --theme-score-card-border: rgba(251, 141, 0, 0.35);
+  --theme-score-card-border-hover: #fdba74;
+}
+
+/* Country Theme: Brazil (Electric Neon Yellow / Lime) */
+[data-theme="brazil"],
+[data-theme="BR"],
+html[data-theme="brazil"],
+body[data-theme="brazil"] {
+  --primary-accent: #eaff00;
+  --primary-glow: rgba(234, 255, 0, 0.35);
+  --primary-light: #f5ff66;
+  --primary-dark: #b8c700;
+  --primary-gradient: linear-gradient(135deg, #eaff00 0%, #a3e635 100%);
+  --headline-gradient: linear-gradient(90deg, #eaff00 0%, #84cc16 100%);
+
+  --border-card: 1.5px solid #eaff00;
+  --border-card-hover: 1.5px solid #f5ff66;
+  --border-subtle: 1px solid rgba(234, 255, 0, 0.2);
+  --border-dark-purple: 1px solid #232700;
+
+  --theme-card-border: #eaff00;
+  --theme-card-border-hover: #f5ff66;
+  --theme-card-glow: 0 0 20px rgba(234, 255, 0, 0.35);
+  --theme-btn-border: #eaff00;
+  --theme-btn-glow: rgba(234, 255, 0, 0.45);
+  --primary-btn-text: #000000;
+
+  --theme-btn-claim-bg: #eaff00;
+  --theme-btn-claim-hover: #f5ff66;
+  --theme-btn-claim-text: #000000;
+  --theme-btn-review-bg: #000000;
+  --theme-btn-review-border: #eaff00;
+  --theme-btn-review-text: #ffffff;
+  --theme-btn-review-hover: #f5ff66;
+  --theme-score-card-border: rgba(234, 255, 0, 0.35);
+  --theme-score-card-border-hover: #f5ff66;
+}
+
+/* Country Theme: Portugal (Vibrant Green) */
+[data-theme="portugal"],
+[data-theme="PT"],
+html[data-theme="portugal"],
+body[data-theme="portugal"] {
+  --primary-accent: #00e636;
+  --primary-glow: rgba(0, 230, 54, 0.35);
+  --primary-light: #4ade80;
+  --primary-dark: #059669;
+  --primary-gradient: linear-gradient(135deg, #00e636 0%, #10b981 100%);
+  --headline-gradient: linear-gradient(90deg, #00e636 0%, #10b981 100%);
+
+  --border-card: 1.5px solid #00e636;
+  --border-card-hover: 1.5px solid #4ade80;
+  --border-subtle: 1px solid rgba(0, 230, 54, 0.2);
+  --border-dark-purple: 1px solid #022c16;
+
+  --theme-card-border: #00e636;
+  --theme-card-border-hover: #4ade80;
+  --theme-card-glow: 0 0 20px rgba(0, 230, 54, 0.35);
+  --theme-btn-border: #00e636;
+  --theme-btn-glow: rgba(0, 230, 54, 0.45);
+  --primary-btn-text: #000000;
+
+  --theme-btn-claim-bg: #00e636;
+  --theme-btn-claim-hover: #4ade80;
+  --theme-btn-claim-text: #000000;
+  --theme-btn-review-bg: #000000;
+  --theme-btn-review-border: #00e636;
+  --theme-btn-review-text: #ffffff;
+  --theme-btn-review-hover: #4ade80;
+  --theme-score-card-border: rgba(0, 230, 54, 0.35);
+  --theme-score-card-border-hover: #4ade80;
+}
+
+/* Country Theme: Germany (Electric Sky Blue / Cyan) */
+[data-theme="germany"],
+[data-theme="DE"],
+html[data-theme="germany"],
+body[data-theme="germany"] {
+  --primary-accent: #4dbcff;
+  --primary-glow: rgba(77, 188, 255, 0.35);
+  --primary-light: #93c5fd;
+  --primary-dark: #0284c7;
+  --primary-gradient: linear-gradient(135deg, #4dbcff 0%, #0284c7 100%);
+  --headline-gradient: linear-gradient(90deg, #4dbcff 0%, #38bdf8 100%);
+
+  --border-card: 1.5px solid #4dbcff;
+  --border-card-hover: 1.5px solid #93c5fd;
+  --border-subtle: 1px solid rgba(77, 188, 255, 0.2);
+  --border-dark-purple: 1px solid #082f49;
+
+  --theme-card-border: #4dbcff;
+  --theme-card-border-hover: #93c5fd;
+  --theme-card-glow: 0 0 20px rgba(77, 188, 255, 0.35);
+  --theme-btn-border: #4dbcff;
+  --theme-btn-glow: rgba(77, 188, 255, 0.45);
+  --primary-btn-text: #000000;
+
+  --theme-btn-claim-bg: #4dbcff;
+  --theme-btn-claim-hover: #93c5fd;
+  --theme-btn-claim-text: #000000;
+  --theme-btn-review-bg: #000000;
+  --theme-btn-review-border: #4dbcff;
+  --theme-btn-review-text: #ffffff;
+  --theme-btn-review-hover: #93c5fd;
+  --theme-score-card-border: rgba(77, 188, 255, 0.35);
+  --theme-score-card-border-hover: #93c5fd;
+}
+
+/* Country Theme: Mexico (Vibrant Crimson Red) */
+[data-theme="mexico"],
+[data-theme="MX"],
+html[data-theme="mexico"],
+body[data-theme="mexico"] {
+  --primary-accent: #ff2e2e;
+  --primary-glow: rgba(255, 46, 46, 0.35);
+  --primary-light: #f87171;
+  --primary-dark: #b91c1c;
+  --primary-gradient: linear-gradient(135deg, #ff2e2e 0%, #dc2626 100%);
+  --headline-gradient: linear-gradient(90deg, #ff2e2e 0%, #f87171 100%);
+
+  --border-card: 1.5px solid #ff2e2e;
+  --border-card-hover: 1.5px solid #f87171;
+  --border-subtle: 1px solid rgba(255, 46, 46, 0.2);
+  --border-dark-purple: 1px solid #3b0a0a;
+
+  --theme-card-border: #ff2e2e;
+  --theme-card-border-hover: #f87171;
+  --theme-card-glow: 0 0 20px rgba(255, 46, 46, 0.35);
+  --theme-btn-border: #ff2e2e;
+  --theme-btn-glow: rgba(255, 46, 46, 0.45);
+  --primary-btn-text: #ffffff;
+
+  --theme-btn-claim-bg: #ff2e2e;
+  --theme-btn-claim-hover: #f87171;
+  --theme-btn-claim-text: #000000;
+  --theme-btn-review-bg: #000000;
+  --theme-btn-review-border: #ff2e2e;
+  --theme-btn-review-text: #ffffff;
+  --theme-btn-review-hover: #f87171;
+  --theme-score-card-border: rgba(255, 46, 46, 0.35);
+  --theme-score-card-border-hover: #f87171;
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-main);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utilities */
+.container {
+  width: min(100% - (var(--container-padding) * 2), var(--container-max));
+  margin-inline: auto;
+}
+
+.text-gradient {
+  background: var(--headline-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.glow-box {
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Standard Buttons with Exact Dimensions & Gradients */
+.btn-claim {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-btn-claim-bg, #cf89ff);
+  border: 1.5px solid var(--theme-btn-claim-bg, #cf89ff);
+  color: var(--theme-btn-claim-text, #000000);
+  font-size: 0.88rem;
+  font-weight: 700;
+  width: 145px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--primary-glow, rgba(207, 137, 255, 0.35));
+  letter-spacing: 0.2px;
+}
+
+.btn-claim:hover {
+  background: var(--theme-btn-claim-hover, #dfaeff);
+  border-color: var(--theme-btn-claim-hover, #dfaeff);
+  box-shadow: 0 0 16px var(--primary-glow, rgba(207, 137, 255, 0.5));
+  transform: translateY(-1px);
+}
+
+.btn-review {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-btn-review-bg, #000000);
+  border: 1.5px solid var(--theme-btn-review-border, #cf89ff);
+  color: var(--theme-btn-review-text, #ffffff);
+  font-size: 0.88rem;
+  font-weight: 700;
+  width: 145px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.btn-review:hover {
+  background: #111111;
+  border-color: var(--theme-btn-review-hover, #dfaeff);
+  box-shadow: 0 0 14px var(--primary-glow, rgba(207, 137, 255, 0.35));
+  transform: translateY(-1px);
+}
+
+.btn-pink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-gradient);
+  color: var(--primary-btn-text, #ffffff);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 20px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px var(--primary-glow, rgba(192, 38, 211, 0.4));
+}
+
+.btn-pink:hover {
+  opacity: 0.95;
+  box-shadow: 0 4px 14px var(--primary-glow, rgba(192, 38, 211, 0.6));
+  transform: translateY(-1px);
+}

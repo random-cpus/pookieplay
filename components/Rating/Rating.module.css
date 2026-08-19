@@ -1,0 +1,57 @@
+.ratingContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.scorePill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 6px 10px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.starIcon {
+  color: #fbbf24;
+  font-size: 0.95rem;
+  margin-right: 2px;
+}
+
+.scoreNumber {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.scoreMax {
+  color: #94a3b8;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.ratingMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.starsGroup {
+  display: flex;
+  gap: 2px;
+  color: #fbbf24;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.verifiedText {
+  color: #4ade80;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}

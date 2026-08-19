@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50" fill="none">
+  <rect width="160" height="50" rx="6" fill="#0b130e" />
+  <g transform="translate(12, 14)">
+    <!-- Clover icon -->
+    <circle cx="8" cy="8" r="5" fill="#22c55e" />
+    <circle cx="16" cy="8" r="5" fill="#22c55e" />
+    <circle cx="12" cy="14" r="5" fill="#22c55e" />
+    <path d="M12 14 L12 22" stroke="#22c55e" stroke-width="2" />
+  </g>
+  <text x="44" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800">dimebit</text>
+</svg>

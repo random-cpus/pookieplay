@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50" fill="none">
+  <!-- Guru with Turban & Beard icon -->
+  <g transform="translate(10, 8)">
+    <!-- Turban -->
+    <path d="M12 2 C16 2, 20 6, 20 12 C20 14, 18 16, 16 18 C18 16, 22 14, 22 10 C22 4, 16 0, 10 0 C6 0, 2 3, 0 8 C3 4, 7 2, 12 2 Z" fill="#f97316" />
+    <circle cx="12" cy="5" r="4" fill="#f97316" />
+    <!-- Face / Beard / Mustache -->
+    <ellipse cx="12" cy="16" rx="7" ry="6" fill="#f97316" />
+    <path d="M6 18 Q12 22 18 18 Q16 28 12 32 Q8 28 6 18 Z" fill="#f97316" />
+    <!-- Eyes -->
+    <circle cx="9" cy="14" r="1.5" fill="#000000" />
+    <circle cx="15" cy="14" r="1.5" fill="#000000" />
+    <!-- Mustache -->
+    <path d="M7 19 Q12 17 17 19 Q12 21 7 19 Z" fill="#000000" />
+  </g>
+  
+  <!-- Text: KHELGURU -->
+  <text x="44" y="31" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" letter-spacing="0.5">KHEL</text>
+  <text x="96" y="31" fill="#f97316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" letter-spacing="0.5">GURU</text>
+</svg>

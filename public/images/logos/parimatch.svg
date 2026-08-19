@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 54" width="220" height="54" fill="none">
+  <!-- PARI MATCH Logo: Neon Yellow & Black Slanted Blocks -->
+  <g transform="skewX(-15)">
+    <!-- Top block: PARI -->
+    <rect x="25" y="6" width="38" height="20" fill="#facc15" rx="1" />
+    <text x="70" y="23" fill="#facc15" font-family="-apple-system, BlinkMacSystemFont, 'Impact', Roboto, sans-serif" font-size="20" font-weight="900" letter-spacing="1.5">PARI</text>
+
+    <!-- Bottom block: MATCH -->
+    <rect x="38" y="28" width="38" height="20" fill="#facc15" rx="1" />
+    <text x="82" y="45" fill="#facc15" font-family="-apple-system, BlinkMacSystemFont, 'Impact', Roboto, sans-serif" font-size="20" font-weight="900" letter-spacing="1.5">MATCH</text>
+  </g>
+</svg>

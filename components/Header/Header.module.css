@@ -1,0 +1,142 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 50;
+  padding: 14px 0;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoImg {
+  height: 38px;
+  width: auto;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: #e5e7eb;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--primary-light);
+}
+
+.activeLink {
+  color: var(--primary-light) !important;
+  font-weight: 700;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hamburgerBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  padding: 0;
+}
+
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.barOpen1 {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.barOpen2 {
+  opacity: 0;
+}
+
+.barOpen3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobileDrawer {
+  display: none;
+  background: #0d0d12;
+  border-top: 1px solid rgba(192, 38, 211, 0.25);
+  border-bottom: 1px solid rgba(192, 38, 211, 0.25);
+  padding: 16px var(--container-padding);
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d1d5db;
+  border-radius: 6px;
+}
+
+.mobileNavLink:hover {
+  background: rgba(192, 38, 211, 0.15);
+  color: var(--primary-light);
+}
+
+.mobileActiveLink {
+  color: var(--primary-light);
+  background: rgba(192, 38, 211, 0.2);
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .hamburgerBtn {
+    display: flex;
+  }
+
+  .mobileDrawer {
+    display: block;
+  }
+}

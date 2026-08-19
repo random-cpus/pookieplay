@@ -1,0 +1,341 @@
+.reviewWrapper {
+  padding: 30px 0 60px;
+}
+
+.header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 28px;
+}
+
+.brandTitle {
+  color: var(--primary-light);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.introSummary {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* Modern Hero Review Card */
+.heroCard {
+  background-color: #07070a;
+  border: 1.5px solid var(--theme-card-border, #d946ef);
+  border-radius: 16px;
+  padding: 22px 26px 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease;
+}
+
+.heroCard:hover {
+  border-color: var(--theme-card-border-hover, #e879f9);
+  box-shadow: var(--theme-card-glow, 0 0 20px rgba(217, 70, 239, 0.25));
+}
+
+.cardMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logoBox {
+  width: 200px;
+  height: 78px;
+  background-color: #000000;
+  border: 1.5px solid #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brandLogo {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.ratingSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ratingInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.verifiedBadge {
+  color: var(--color-green);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ratingSub {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.bonusBox {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.bonusLabel {
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.bonusTitle {
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.ctaBox {
+  flex-shrink: 0;
+}
+
+.btnClaim {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 42px;
+  background: var(--theme-btn-claim-bg, #cf89ff);
+  border: 1.5px solid var(--theme-btn-claim-bg, #cf89ff);
+  color: var(--theme-btn-claim-text, #000000);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--primary-glow, rgba(207, 137, 255, 0.35));
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.btnClaim:hover {
+  background: var(--theme-btn-claim-hover, #dfaeff);
+  border-color: var(--theme-btn-claim-hover, #dfaeff);
+  box-shadow: 0 0 16px var(--primary-glow, rgba(207, 137, 255, 0.5));
+  transform: translateY(-1px);
+}
+
+.specStrip {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.paymentSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.specLabel {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.paymentList {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.paymentPill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.quickSpecs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quickSpecPill {
+  background: rgba(192, 38, 211, 0.12);
+  border: 1px solid rgba(192, 38, 211, 0.3);
+  color: var(--primary-light);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.disclaimerRow {
+  margin-top: 12px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.disclaimerRow p {
+  color: #94a3b8;
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.editorialArticle {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reviewParagraph {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .heroCard {
+    padding: 16px 16px 14px;
+    border-radius: 16px;
+  }
+
+  .cardMain {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .logoBox {
+    width: 100%;
+    max-width: 100%;
+    height: 85px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1.5px solid #ffffff;
+  }
+
+  .brandLogo {
+    max-height: 52px;
+    max-width: 85%;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .ratingSection {
+    justify-content: center;
+  }
+
+  .bonusBox {
+    gap: 4px;
+  }
+
+  .bonusLabel {
+    font-size: 0.82rem;
+  }
+
+  .bonusTitle {
+    font-size: 1.28rem;
+    line-height: 1.25;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .ctaBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .btnClaim {
+    width: 100%;
+    max-width: 240px;
+    height: 42px;
+    font-size: 0.92rem;
+  }
+
+  .specStrip {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .paymentSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .paymentList {
+    justify-content: center;
+    max-width: 320px;
+  }
+
+  .paymentPill {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+
+  .quickSpecs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .quickSpecPill {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+
+  .disclaimerRow {
+    margin-top: 10px;
+    padding-top: 2px;
+  }
+
+  .disclaimerRow p {
+    font-size: 0.72rem;
+  }
+}

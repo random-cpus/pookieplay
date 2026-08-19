@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300" fill="none">
+  <defs>
+    <radialGradient id="glowG" cx="70%" cy="50%" r="60%">
+      <stop stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#c026d3" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="300" fill="url(#glowG)" />
+
+  <!-- Cricket Batsman Dynamic Vector Silhouette -->
+  <g transform="translate(180, 20)">
+    <!-- Helmet / Head -->
+    <ellipse cx="140" cy="50" rx="22" ry="24" fill="#0284c7" />
+    <!-- Helmet grill -->
+    <path d="M125 54 L158 54 M128 62 L154 62 M142 46 L142 66" stroke="#94a3b8" stroke-width="2" />
+    
+    <!-- Torso & Jersey -->
+    <path d="M120 74 L165 74 L185 140 L105 140 Z" fill="#0369a1" />
+    <path d="M120 74 L142 140 L165 74" fill="#0284c7" />
+
+    <!-- Arms & Cricket Bat Swing -->
+    <path d="M105 84 L60 120 L75 135 L120 95 Z" fill="#0284c7" />
+    <path d="M165 84 L130 135 L145 145 L180 95 Z" fill="#0284c7" />
+    <!-- Gloves -->
+    <ellipse cx="65" cy="130" rx="10" ry="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <ellipse cx="135" cy="142" rx="10" ry="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <!-- Bat Handle -->
+    <line x1="60" y1="135" x2="30" y2="175" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" />
+    <!-- Bat Blade -->
+    <path d="M30 175 L-25 245 L-5 255 L50 185 Z" fill="#d97706" stroke="#b45309" stroke-width="2" />
+    
+    <!-- Legs / Pads -->
+    <path d="M110 140 L100 230 L125 230 L135 140 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+    <path d="M150 140 L160 230 L185 230 L175 140 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+    <!-- Shoes -->
+    <ellipse cx="110" cy="235" rx="16" ry="8" fill="#0284c7" />
+    <ellipse cx="175" cy="235" rx="16" ry="8" fill="#0284c7" />
+  </g>
+</svg>

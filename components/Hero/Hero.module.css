@@ -1,0 +1,49 @@
+.heroSection {
+  padding: 40px 0 28px;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textColumn {
+  flex: 1;
+  max-width: 860px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.titleLine1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.titleLine2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 780px;
+}
+
+@media (max-width: 860px) {
+  .titleLine1,
+  .titleLine2 {
+    font-size: 1.75rem;
+  }
+}

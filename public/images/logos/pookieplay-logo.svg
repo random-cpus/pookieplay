@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50" fill="none">
+  <!-- Card Suits Emblem -->
+  <g transform="translate(5, 5)">
+    <!-- Diamonds / Spades / Hearts / Clubs stylized geometry -->
+    <path d="M18 4 L26 18 L18 32 L10 18 Z" fill="#d946ef" opacity="0.9" />
+    <path d="M18 9 L23 18 L18 27 L13 18 Z" fill="#000000" />
+    <circle cx="18" cy="18" r="3" fill="#ec4899" />
+    <path d="M7 18 L18 7 L29 18 L18 29 Z" stroke="#e879f9" stroke-width="1.5" fill="none" />
+    <path d="M3 18 L18 3 L33 18 L18 33 Z" stroke="#c026d3" stroke-width="1" fill="none" opacity="0.6" />
+  </g>
+  <!-- Brand Text -->
+  <text x="48" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="900" letter-spacing="1">POOKIE</text>
+  <text x="48" y="40" fill="#e879f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" letter-spacing="2">PLAY</text>
+</svg>

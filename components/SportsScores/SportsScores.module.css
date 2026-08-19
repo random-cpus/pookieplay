@@ -1,0 +1,59 @@
+.sportsSection {
+  margin: 36px 0;
+}
+
+.tabNav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.tabNav::-webkit-scrollbar {
+  display: none;
+}
+
+.tabBtn {
+  background: #000000;
+  border: 1px solid var(--border-dark-purple, rgba(255, 255, 255, 0.15));
+  color: #d1d5db;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.tabBtn:hover {
+  background: var(--primary-glow, rgba(192, 38, 211, 0.25));
+  color: #ffffff;
+  border-color: var(--primary-light, rgba(232, 121, 249, 0.5));
+}
+
+.activeTab {
+  background: var(--theme-btn-claim-bg, var(--primary-gradient)) !important;
+  color: var(--theme-btn-claim-text, #000000) !important;
+  border-color: var(--theme-btn-claim-bg, var(--primary-accent)) !important;
+  box-shadow: 0 2px 8px var(--primary-glow, rgba(192, 38, 211, 0.4));
+}
+
+.genericEmptyContainer {
+  background: #0c0d12;
+  border: 1.5px solid var(--theme-card-border, #d946ef);
+  border-radius: 14px;
+  padding: 50px 24px;
+  text-align: center;
+  color: #94a3b8;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px var(--primary-glow, rgba(0, 0, 0, 0.3));
+}
+
+.genericEmptyText {
+  font-size: 0.95rem;
+  font-weight: 500;
+}

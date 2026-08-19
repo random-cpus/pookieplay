@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 180" width="360" height="180" fill="none">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0" y1="0" x2="360" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b0764" />
+      <stop offset="0.5" stop-color="#581c87" />
+      <stop offset="1" stop-color="#7e22ce" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="180" rx="12" fill="url(#bgGrad3)" />
+  
+  <g transform="translate(130, 18)">
+    <!-- Golden Shield Badge -->
+    <path d="M20 4 L32 10 L32 26 C32 34 20 42 20 42 C20 42 8 34 8 26 L8 10 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="2" />
+    <path d="M14 22 L18 26 L26 16" stroke="#78350f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    
+    <!-- Phone -->
+    <rect x="46" y="6" width="24" height="38" rx="3" fill="#1e1e24" stroke="#c084fc" stroke-width="1.5" />
+    <rect x="50" y="12" width="16" height="24" fill="#581c87" />
+  </g>
+
+  <!-- Subtitle pill text -->
+  <text x="180" y="98" text-anchor="middle" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="800" letter-spacing="1">THE ULTIMATE GUIDE TO</text>
+  <!-- Card Title -->
+  <text x="180" y="120" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" letter-spacing="0.5">ONLINE BETTING IN INDIA</text>
+  <text x="180" y="145" text-anchor="middle" fill="#e879f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600">Legality • Safety • Best Platforms</text>
+</svg>

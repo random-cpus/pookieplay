@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 54" width="220" height="54" fill="none">
+  <!-- MELBET Logo: White MEL + Gold/Yellow BET -->
+  <g transform="skewX(-10)">
+    <!-- MEL in bold white -->
+    <text x="25" y="38" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Impact', sans-serif" font-size="34" font-weight="900" letter-spacing="1">MEL</text>
+    
+    <!-- BET in vibrant gold/yellow -->
+    <text x="110" y="38" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Impact', sans-serif" font-size="34" font-weight="900" letter-spacing="1">BET</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none">
+  <defs>
+    <linearGradient id="purpleGrad3" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9333ea" />
+      <stop offset="1" stop-color="#c026d3" />
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="20" fill="url(#purpleGrad3)" />
+  <!-- Brain and magnifying gear icon -->
+  <g transform="translate(18, 18)" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="16" cy="18" r="10" fill="rgba(255,255,255,0.15)" />
+    <circle cx="26" cy="26" r="8" fill="rgba(255,255,255,0.25)" />
+    <path d="M32 32 L40 40" stroke-width="3" />
+  </g>
+</svg>

@@ -1,0 +1,130 @@
+.wrapper {
+  padding: 30px 0 60px;
+}
+
+.pageTitle {
+  color: var(--primary-light);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.formCard {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(192, 38, 211, 0.4);
+  border-radius: 14px;
+  padding: 36px 40px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.required {
+  color: #f43f5e;
+}
+
+.input,
+.textarea {
+  background-color: #08080a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 10px rgba(192, 38, 211, 0.3);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #4b5563;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btnRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.submitBtn {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 10px 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(192, 38, 211, 0.4);
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+  opacity: 0.95;
+  box-shadow: 0 4px 16px rgba(192, 38, 211, 0.6);
+  transform: translateY(-1px);
+}
+
+.successMessage {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.successTitle {
+  color: var(--primary-light);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.successText {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  .formCard {
+    padding: 24px 18px;
+  }
+
+  .nameRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
