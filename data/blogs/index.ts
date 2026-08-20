@@ -10,6 +10,7 @@ export interface BlogPost {
   author: string;
   readTime: string;
   tags: string[];
+  country?: string;
   content: {
     heading: string;
     body: string[];

@@ -1,4 +1,5 @@
 import { bettingSites } from '@/data/betting-sites';
+import { blogPosts } from '@/data/blogs';
 
 export interface CountryTheme {
   code: string;
@@ -123,7 +124,18 @@ export const countryThemes: Record<string, CountryTheme> = {
   },
 };
 
-export function getThemeByPath(pathname: string): CountryTheme {
+export function getThemeByPath(pathname: string, countryQuery?: string | null): CountryTheme {
+  if (countryQuery) {
+    const q = countryQuery.toUpperCase();
+    if (countryThemes[q]) return countryThemes[q];
+    if (q === 'CANADA') return countryThemes.CA;
+    if (q === 'BRAZIL') return countryThemes.BR;
+    if (q === 'PORTUGAL') return countryThemes.PT;
+    if (q === 'GERMANY') return countryThemes.DE;
+    if (q === 'MEXICO') return countryThemes.MX;
+    if (q === 'INDIA') return countryThemes.IN;
+  }
+
   const clean = pathname ? pathname.toLowerCase().replace(/^\/+|\/+$/g, '') : '';
   
   if (clean === 'canada') return countryThemes.CA;
@@ -132,6 +144,14 @@ export function getThemeByPath(pathname: string): CountryTheme {
   if (clean === 'germany') return countryThemes.DE;
   if (clean === 'mexico') return countryThemes.MX;
   if (clean === '' || clean === 'india') return countryThemes.IN;
+
+  if (clean.startsWith('blogs/')) {
+    const blogSlug = clean.replace(/^blogs\//, '');
+    const post = blogPosts.find(p => p.slug.toLowerCase() === blogSlug);
+    if (post && post.country && countryThemes[post.country.toUpperCase()]) {
+      return countryThemes[post.country.toUpperCase()];
+    }
+  }
 
   const site = bettingSites.find(s => s.slug.toLowerCase() === clean);
   if (site && site.countries && site.countries.length > 0) {

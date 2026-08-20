@@ -5,11 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import { blogPosts, getBlogPostBySlug } from "@/data/blogs";
+import { getThemeByPath } from "@/data/themes";
 import styles from "./BlogPost.module.css";
 
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
+  }>;
+  searchParams?: Promise<{
+    country?: string;
+    c?: string;
   }>;
 }
 
@@ -19,7 +24,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
 
@@ -55,13 +60,18 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params, searchParams }: BlogPostPageProps) {
   const { slug } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const countryParam = resolvedSearchParams.country || resolvedSearchParams.c || null;
+
   const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
+
+  const theme = getThemeByPath(`/blogs/${slug}/`, countryParam || post.country);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -87,7 +97,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "/" },
+    { name: "Home", url: theme.homePath || "/" },
     { name: "Blogs", url: "/blogs/" },
     { name: post.title, url: `/blogs/${post.slug}/` },
   ];
@@ -107,7 +117,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <div className="container">
+      <div className="container" data-theme={theme.themeId}>
         <div className={styles.wrapper}>
           <Breadcrumbs items={breadcrumbs} />
 
@@ -170,14 +180,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <aside className={styles.relatedSection} aria-label="Related Articles">
               <h3 className={styles.relatedTitle}>Related Guides & Articles</h3>
               <div className={styles.relatedGrid}>
-                {otherPosts.map((rel) => (
-                  <Link key={rel.slug} href={`/blogs/${rel.slug}/`} className={styles.relatedCard}>
-                    <h4 className={styles.relatedCardTitle}>
-                      {rel.title}: {rel.subtitle}
-                    </h4>
-                    <p className={styles.relatedCardExcerpt}>{rel.excerpt}</p>
-                  </Link>
-                ))}
+                {otherPosts.map((rel) => {
+                  const relHref = `/blogs/${rel.slug}/${countryParam ? `?country=${countryParam}` : ""}`;
+                  return (
+                    <Link key={rel.slug} href={relHref} className={styles.relatedCard}>
+                      <h4 className={styles.relatedCardTitle}>
+                        {rel.title}: {rel.subtitle}
+                      </h4>
+                      <p className={styles.relatedCardExcerpt}>{rel.excerpt}</p>
+                    </Link>
+                  );
+                })}
               </div>
             </aside>
           )}

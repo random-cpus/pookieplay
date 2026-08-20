@@ -39,7 +39,7 @@ export default function BrazilPage() {
         tabsOrder={["football", "cricket"]}
       />
 
-      <ExpertPicks />
+      <ExpertPicks countryCode="br" />
       <FAQ items={homeFAQs} title="Quick Help" />
     </div>
   );

@@ -39,7 +39,7 @@ export default function PortugalPage() {
         tabsOrder={["football", "cricket"]}
       />
 
-      <ExpertPicks />
+      <ExpertPicks countryCode="pt" />
       <FAQ items={homeFAQs} title="Quick Help" />
     </div>
   );

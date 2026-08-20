@@ -4,7 +4,7 @@ import Image from "next/image";
 import { blogPosts } from "@/data/blogs";
 import styles from "./ExpertPicks.module.css";
 
-export default function ExpertPicks() {
+export default function ExpertPicks({ countryCode }: { countryCode?: string } = {}) {
   const featuredPosts = blogPosts.slice(0, 3);
 
   const bannerMap: Record<string, string> = {
@@ -20,10 +20,11 @@ export default function ExpertPicks() {
       <div className={styles.grid}>
         {featuredPosts.map((post) => {
           const bannerSrc = bannerMap[post.slug] || post.featuredImage;
+          const blogHref = `/blogs/${post.slug}/${countryCode ? `?country=${countryCode.toLowerCase()}` : ""}`;
 
           return (
             <article key={post.slug} className={styles.card}>
-              <Link href={`/blogs/${post.slug}/`} className={styles.cardLink}>
+              <Link href={blogHref} className={styles.cardLink}>
                 {/* Top Art Banner */}
                 <div className={styles.bannerWrapper}>
                   <Image

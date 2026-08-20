@@ -1,15 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { getThemeByPath } from "@/data/themes";
 import styles from "./Footer.module.css";
 
-export default function Footer() {
+function FooterContent() {
   const pathname = usePathname();
-  const theme = getThemeByPath(pathname || "");
+  const searchParams = useSearchParams();
+  const countryParam = searchParams?.get("country") || searchParams?.get("c");
+  const theme = getThemeByPath(pathname || "", countryParam);
 
   return (
     <footer className={styles.footer}>
@@ -103,5 +105,13 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+export default function Footer() {
+  return (
+    <Suspense fallback={null}>
+      <FooterContent />
+    </Suspense>
   );
 }

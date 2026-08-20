@@ -39,7 +39,7 @@ export default function MexicoPage() {
         tabsOrder={["football", "cricket"]}
       />
 
-      <ExpertPicks />
+      <ExpertPicks countryCode="mx" />
       <FAQ items={homeFAQs} title="Quick Help" />
     </div>
   );

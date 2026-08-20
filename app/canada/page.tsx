@@ -41,7 +41,7 @@ export default function CanadaPage() {
       />
 
       {/* Expert Picks */}
-      <ExpertPicks />
+      <ExpertPicks countryCode="ca" />
 
       {/* Quick Help FAQ */}
       <FAQ items={homeFAQs} title="Quick Help" />

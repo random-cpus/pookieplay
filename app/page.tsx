@@ -57,7 +57,7 @@ export default function HomePage() {
         />
 
         {/* Section 4: Expert Picks */}
-        <ExpertPicks />
+        <ExpertPicks countryCode="in" />
 
         {/* Section 5: Quick Help FAQ */}
         <FAQ items={homeFAQs} title="Quick Help" />

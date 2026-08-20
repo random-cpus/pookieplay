@@ -1,17 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import CountrySelector from "@/components/CountrySelector/CountrySelector";
 import { getThemeByPath } from "@/data/themes";
 import styles from "./Header.module.css";
 
-export default function Header() {
+function HeaderContent() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const pathname = usePathname();
-  const theme = getThemeByPath(pathname || "");
+  const searchParams = useSearchParams();
+  const countryParam = searchParams?.get("country") || searchParams?.get("c");
+  const theme = getThemeByPath(pathname || "", countryParam);
 
   const navLinks = [
     { label: "About Us", href: "/about-us/" },
@@ -178,5 +180,13 @@ export default function Header() {
         </div>
       </aside>
     </header>
+  );
+}
+
+export default function Header() {
+  return (
+    <Suspense fallback={null}>
+      <HeaderContent />
+    </Suspense>
   );
 }

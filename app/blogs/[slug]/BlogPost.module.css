@@ -6,9 +6,10 @@
   max-width: 820px;
   margin: 0 auto;
   background-color: var(--bg-card);
-  border: 1px solid rgba(192, 38, 211, 0.35);
+  border: 1.5px solid var(--theme-score-card-border, rgba(192, 38, 211, 0.35));
   border-radius: 16px;
   padding: 40px 44px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 25px var(--primary-glow, rgba(192, 38, 211, 0.2));
 }
 
 .header {
@@ -18,14 +19,15 @@
 
 .badge {
   display: inline-block;
-  background: var(--primary-gradient);
-  color: #ffffff;
+  background: var(--theme-btn-claim-bg, var(--primary-gradient));
+  color: var(--theme-btn-claim-text, #000000);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 1px;
   padding: 4px 12px;
   border-radius: 9999px;
   margin-bottom: 12px;
+  box-shadow: 0 2px 8px var(--primary-glow);
 }
 
 .title {
@@ -60,6 +62,7 @@
   overflow: hidden;
   margin-bottom: 32px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--theme-score-card-border, rgba(255, 255, 255, 0.08));
 }
 
 .featuredImage {
@@ -110,8 +113,8 @@
 }
 
 .tag {
-  background: #181824;
-  border: 1px solid rgba(192, 38, 211, 0.3);
+  background: var(--bg-card-hover, #181824);
+  border: 1px solid var(--theme-score-card-border, rgba(192, 38, 211, 0.3));
   color: var(--primary-light);
   font-size: 0.75rem;
   font-weight: 600;
@@ -139,16 +142,17 @@
 
 .relatedCard {
   background: var(--bg-card);
-  border: 1px solid rgba(192, 38, 211, 0.3);
+  border: 1.5px solid var(--theme-score-card-border, rgba(192, 38, 211, 0.3));
   border-radius: 10px;
   padding: 18px;
   transition: all 0.2s ease;
 }
 
 .relatedCard:hover {
-  border-color: var(--primary-light);
+  border-color: var(--theme-score-card-border-hover, var(--primary-light));
   transform: translateY(-2px);
   background: var(--bg-card-hover);
+  box-shadow: 0 8px 25px var(--primary-glow, rgba(192, 38, 211, 0.25));
 }
 
 .relatedCardTitle {
