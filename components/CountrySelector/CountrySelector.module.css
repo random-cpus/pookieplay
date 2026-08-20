@@ -33,9 +33,15 @@
   white-space: nowrap;
 }
 
+.btnTextMobile {
+  display: none;
+  white-space: nowrap;
+}
+
 .chevron {
   transition: transform 0.2s ease;
   opacity: 0.8;
+  flex-shrink: 0;
 }
 
 .chevronOpen {
@@ -114,5 +120,38 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .selectorBtn {
+    padding: 6px 12px;
+    font-size: 0.76rem;
+    gap: 6px;
+    height: 34px;
+  }
+
+  .globeIcon {
+    font-size: 0.88rem;
+  }
+
+  .btnText {
+    display: none;
+  }
+
+  .btnTextMobile {
+    display: inline;
+    font-weight: 600;
+  }
+
+  .dropdown {
+    right: 0;
+    width: 175px;
+    top: calc(100% + 6px);
+  }
+
+  .countryItem {
+    padding: 8px 12px;
+    font-size: 0.82rem;
   }
 }

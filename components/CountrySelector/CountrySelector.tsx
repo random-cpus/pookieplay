@@ -38,14 +38,19 @@ export default function CountrySelector() {
         aria-expanded={isOpen}
         aria-label="Select Country"
       >
-        <span className={styles.globeIcon}>🌐</span>
+        <span className={styles.globeIcon}>
+          {currentCountry.code === "IN" ? "🌐" : currentCountry.flag}
+        </span>
         <span className={styles.btnText}>
-          {currentCountry.code === "IN" ? "Select Country" : `${currentCountry.flag} ${currentCountry.name}`}
+          {currentCountry.code === "IN" ? "Select Country" : currentCountry.name}
+        </span>
+        <span className={styles.btnTextMobile}>
+          {currentCountry.code === "IN" ? "Region" : currentCountry.name}
         </span>
         <svg
           className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}
-          width="12"
-          height="12"
+          width="10"
+          height="10"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
