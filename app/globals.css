@@ -243,6 +243,7 @@ html {
   color-scheme: dark;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {

@@ -96,89 +96,90 @@ function HeaderContent() {
         </div>
       </div>
 
-      {/* Mobile Right-Slide Drawer & Backdrop Overlay */}
+      {/* Mobile Right-Slide Drawer & Backdrop Overlay (Only mounted when open) */}
       {isMobileOpen && (
-        <div
-          className={styles.drawerBackdrop}
-          onClick={() => setIsMobileOpen(false)}
-          aria-hidden="true"
-        />
-      )}
-
-      <aside
-        className={`${styles.sideDrawer} ${isMobileOpen ? styles.sideDrawerOpen : ""}`}
-        aria-label="Mobile Navigation Drawer"
-      >
-        <div className={styles.drawerHeader}>
-          <Link href={theme.homePath || "/"} className={styles.drawerLogoLink} onClick={() => setIsMobileOpen(false)}>
-            <Image
-              src={theme.logo}
-              alt={theme.logoAlt}
-              width={105}
-              height={40}
-              unoptimized
-              className={styles.drawerLogoImg}
-            />
-          </Link>
-          <button
-            type="button"
-            className={styles.drawerCloseBtn}
+        <>
+          <div
+            className={styles.drawerBackdrop}
             onClick={() => setIsMobileOpen(false)}
-            aria-label="Close navigation menu"
+            aria-hidden="true"
+          />
+          <aside
+            className={`${styles.sideDrawer} ${styles.sideDrawerOpen}`}
+            aria-label="Mobile Navigation Drawer"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
+            <div className={styles.drawerHeader}>
+              <Link href={theme.homePath || "/"} className={styles.drawerLogoLink} onClick={() => setIsMobileOpen(false)}>
+                <Image
+                  src={theme.logo}
+                  alt={theme.logoAlt}
+                  width={105}
+                  height={40}
+                  unoptimized
+                  className={styles.drawerLogoImg}
+                />
+              </Link>
+              <button
+                type="button"
+                className={styles.drawerCloseBtn}
+                onClick={() => setIsMobileOpen(false)}
+                aria-label="Close navigation menu"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
 
-        <nav className={styles.drawerNav}>
-          <ul className={styles.drawerNavList}>
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href || pathname.startsWith(link.href);
-              return (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`${styles.drawerNavLink} ${isActive ? styles.drawerActiveLink : ""}`}
-                    onClick={() => setIsMobileOpen(false)}
-                  >
-                    <span>{link.label}</span>
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className={styles.navArrow}
-                    >
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+            <nav className={styles.drawerNav}>
+              <ul className={styles.drawerNavList}>
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href || pathname.startsWith(link.href);
+                  return (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className={`${styles.drawerNavLink} ${isActive ? styles.drawerActiveLink : ""}`}
+                        onClick={() => setIsMobileOpen(false)}
+                      >
+                        <span>{link.label}</span>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className={styles.navArrow}
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
 
-        <div className={styles.drawerFooter}>
-          <p className={styles.drawerFooterText}>PookiePlay © 2026</p>
-          <p className={styles.drawerFooterSub}>18+ | Play Responsibly</p>
-        </div>
-      </aside>
+            <div className={styles.drawerFooter}>
+              <p className={styles.drawerFooterText}>PookiePlay © 2026</p>
+              <p className={styles.drawerFooterSub}>18+ | Play Responsibly</p>
+            </div>
+          </aside>
+        </>
+      )}
     </header>
   );
 }
