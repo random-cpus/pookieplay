@@ -130,11 +130,11 @@ export default async function BlogPostPage({ params, searchParams }: BlogPostPag
               </h1>
 
               <div className={styles.metaInfo}>
-                <span>By {post.author}</span>
-                <span>•</span>
-                <time dateTime={post.date}>Published on {post.date}</time>
-                <span>•</span>
-                <span>{post.readTime}</span>
+                <span className={styles.metaAuthor}>By {post.author}</span>
+                <span className={styles.metaDivider}>•</span>
+                <time dateTime={post.date} className={styles.metaDate}>Published on {post.date}</time>
+                <span className={styles.metaDivider}>•</span>
+                <span className={styles.metaReadTime}>{post.readTime}</span>
               </div>
             </header>
 
