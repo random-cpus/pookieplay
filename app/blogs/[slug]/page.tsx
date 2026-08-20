@@ -145,6 +145,7 @@ export default async function BlogPostPage({ params, searchParams }: BlogPostPag
                 width={800}
                 height={400}
                 priority
+                unoptimized
                 className={styles.featuredImage}
               />
             </div>

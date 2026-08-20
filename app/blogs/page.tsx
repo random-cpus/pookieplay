@@ -56,6 +56,7 @@ export default function BlogsPage() {
                       alt={post.title}
                       width={360}
                       height={180}
+                      unoptimized
                       className={styles.bannerImg}
                     />
                   </div>

@@ -32,6 +32,7 @@ export default function ExpertPicks({ countryCode }: { countryCode?: string } = 
                     alt={post.title}
                     width={360}
                     height={180}
+                    unoptimized
                     className={styles.bannerImg}
                   />
                 </div>
