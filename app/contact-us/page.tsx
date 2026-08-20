@@ -64,7 +64,7 @@ export default function ContactUsPage() {
                     name="firstName"
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    placeholder="First Name"
+                    placeholder="e.g. Rahul / John"
                     className={styles.input}
                   />
                 </div>
@@ -79,7 +79,7 @@ export default function ContactUsPage() {
                     name="lastName"
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    placeholder="Last Name"
+                    placeholder="e.g. Sharma / Doe"
                     className={styles.input}
                   />
                 </div>
@@ -97,7 +97,7 @@ export default function ContactUsPage() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="Email Address"
+                  placeholder="yourname@example.com"
                   className={styles.input}
                 />
               </div>
@@ -113,7 +113,7 @@ export default function ContactUsPage() {
                   name="subject"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  placeholder="Subject"
+                  placeholder="How can we help you?"
                   className={styles.input}
                 />
               </div>
@@ -130,7 +130,7 @@ export default function ContactUsPage() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Your Message"
+                  placeholder="Type your message, inquiry, or feedback here..."
                   className={styles.textarea}
                 />
               </div>
