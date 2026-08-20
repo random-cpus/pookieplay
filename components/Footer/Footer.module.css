@@ -116,11 +116,15 @@
     grid-column: 1 / -1;
     max-width: 100%;
   }
+
+  .logoImg {
+    height: 52px;
+  }
 }
 
 @media (max-width: 540px) {
   .logoImg {
-    height: 42px;
+    height: 58px;
   }
 
   .footerGrid {
