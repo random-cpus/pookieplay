@@ -91,10 +91,14 @@
 .drawerBackdrop {
   position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(5px);
-  z-index: 90;
+  z-index: 999;
   animation: fadeIn 0.2s ease-out;
+  touch-action: none;
 }
 
 .sideDrawer {
@@ -105,14 +109,17 @@
   width: 290px;
   max-width: 85vw;
   height: 100vh;
+  height: 100dvh;
   background: #0d0e15;
   border-left: 1.5px solid var(--theme-score-card-border, rgba(192, 38, 211, 0.3));
-  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.9), 0 0 25px var(--primary-glow, rgba(192, 38, 211, 0.15));
-  z-index: 100;
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.95), 0 0 30px var(--primary-glow, rgba(192, 38, 211, 0.2));
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   padding: 24px 20px;
   animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .drawerHeader {

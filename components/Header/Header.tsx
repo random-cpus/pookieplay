@@ -29,15 +29,21 @@ export default function Header() {
     { label: "FAQ's", href: "/faqs/" },
   ];
 
-  // Lock body scroll when mobile drawer is open
+  // Lock body & html scroll and touchAction when mobile drawer is open
   useEffect(() => {
     if (isMobileOpen) {
+      document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
     } else {
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
+      document.body.style.touchAction = "";
     }
     return () => {
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
+      document.body.style.touchAction = "";
     };
   }, [isMobileOpen]);
 
