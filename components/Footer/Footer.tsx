@@ -24,8 +24,8 @@ function FooterContent() {
               <Image
                 src={theme.logo}
                 alt={theme.logoAlt}
-                width={120}
-                height={48}
+                width={160}
+                height={64}
                 unoptimized
                 className={styles.logoImg}
               />

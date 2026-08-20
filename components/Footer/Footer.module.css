@@ -24,8 +24,14 @@
 }
 
 .logoImg {
-  height: 34px;
+  height: 48px;
   width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.logoImg:hover {
+  transform: scale(1.03);
 }
 
 .brandDesc {
@@ -113,6 +119,10 @@
 }
 
 @media (max-width: 540px) {
+  .logoImg {
+    height: 42px;
+  }
+
   .footerGrid {
     grid-template-columns: 1fr;
     gap: 25px;
