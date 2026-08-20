@@ -1,29 +1,24 @@
 "use client";
 
-import { useEffect, Suspense } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { getThemeByPath } from "@/data/themes";
 
-function ThemeSync() {
+export default function ThemeManager() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const countryParam = searchParams?.get("country") || searchParams?.get("c");
+    let countryParam: string | null = null;
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      countryParam = urlParams.get("country") || urlParams.get("c");
+    }
     const theme = getThemeByPath(pathname || "", countryParam);
     if (typeof document !== "undefined") {
       document.documentElement.setAttribute("data-theme", theme.themeId);
       document.body.setAttribute("data-theme", theme.themeId);
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
-}
-
-export default function ThemeManager() {
-  return (
-    <Suspense fallback={null}>
-      <ThemeSync />
-    </Suspense>
-  );
 }

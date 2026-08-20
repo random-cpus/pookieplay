@@ -1,16 +1,23 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { getThemeByPath } from "@/data/themes";
 import styles from "./Footer.module.css";
 
-function FooterContent() {
+export default function Footer() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const countryParam = searchParams?.get("country") || searchParams?.get("c");
+  const [countryParam, setCountryParam] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      setCountryParam(urlParams.get("country") || urlParams.get("c"));
+    }
+  }, [pathname]);
+
   const theme = getThemeByPath(pathname || "", countryParam);
 
   return (
@@ -105,13 +112,5 @@ function FooterContent() {
         </div>
       </div>
     </footer>
-  );
-}
-
-export default function Footer() {
-  return (
-    <Suspense fallback={null}>
-      <FooterContent />
-    </Suspense>
   );
 }

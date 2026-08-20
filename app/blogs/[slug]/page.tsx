@@ -114,6 +114,7 @@ export default async function BlogPostPage({ params, searchParams }: BlogPostPag
   return (
     <>
       <script
+        id="article-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
